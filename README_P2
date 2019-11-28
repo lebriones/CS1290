@@ -1,0 +1,14 @@
+Recursive Definition: 
+  You have to traverse every element in the 2D array starting in the second row. 
+  The recursion occurs as you move downward, if you are at the first column, you pick the minimum value of the top and right values. 
+  If you are at the last column, you pick the minimum of the top and the left values. 
+  If you are not in either of those scenarios, you pick the minimum of the right, middle and left values. 
+  You could represent this as a tree in a way where you make a decision at every node which makes it a recursive algorithm. 
+  Since the values can overlap when going left, right or middle, a lot of the subproblems are repeated which creates a need to solve this using dynamic programming.
+  
+Data structure: You can store the solutions to the subproblems in the same 2D array that is given. 
+  You can just add the minimum of your choices to the current value you’re looking at and eventually you pick the minimum value of the last row.
+
+Ideal and Dukes 7: I used problem solving techniques to decompose the problem and come up with the recursive idea. 
+  I came up with small instances of the problem in order to visualize the traversal of the 2D array. 
+  This problem helped reinforce my skills in solving some similar problems that I had encountered before in class.
