@@ -1,0 +1,16 @@
+Recursive Definition: 
+For a given number, you find all the squares from 1 to that number inclusive. (example: n = 100, squares = [1, 4, 9, 16, 25, 36, 64, 81, 100]). 
+You can start by subtracting the largest square from your given number and see if you can get to 0. 
+For example, 100 – 100 would give you 0 so the answer would be 1. Recursion is used since you make a decision to subtract a number or not. 
+You start by subtracting the largest number first so that you can use as least as possible. 
+Every number has a solution associated with it that represents the least number of perfect squares that add up to it. 
+For every number, a subproblem that has already been solved helps with reaching the solution. 
+For example, p(99) = p(98) + 1 since 1 is the least amount of perfect squares that fit in 99-98.
+
+Data structure: 
+You can store a list indexed from 0 to n where you store the solutions to each number.
+You can reuse the solutions from numbers smaller than your given n in order to reach a solution for it.
+
+IDEAL and Duke’s 7 Steps: 
+Problem solving strategies helped with decomposing the problem. 
+I was not really able to come up with a working algorithm.
