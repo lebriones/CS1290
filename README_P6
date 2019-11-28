@@ -1,0 +1,16 @@
+Recursive definition: 
+For any two chains [a,b] and [c,d] to connect, the condition b < c has to be met. 
+We have to traverse through the 2D array in a recursive fashion in order to check that any given b is less than any given c, if the condition is met at some point, we can update the longest chain that can be formed using that particular chain. 
+We check this using the following recursive formula 
+if pairs[j][1] < pairs[i][0]:
+                chains[i] = max(chains[i], chains[j] + 1
+What it’s basically doing is that it’s checking that b is less than c making c the new a with a new value of b and checking if that is less than all the other c values. 
+Since one chain can be part of a bigger chain, when you find that a new chain is created that had already used a smaller version of the problem, you can just add 1 to that existing result.
+
+Data structure: 
+We can use a list to store the longest number of chains that can be formed at each chain. 
+The maximum number of that list will be the longest chain that can be formed at that index which is the same longest chain that can be formed from the entire list of pairs.
+
+IDEAL and Dukes 7 steps: 
+Solving a small problem first helped with understanding how to implement the solution. 
+Abstraction also helped to make the code simpler even if a small number of operations were redundant.
