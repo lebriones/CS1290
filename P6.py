@@ -1,4 +1,4 @@
-def longest_chain(self, pairs):
+def longest_chain(pairs):
     chains = [1] * len(pairs)
     for i in range(len(pairs)):
         for j in range(i):
