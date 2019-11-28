@@ -1,0 +1,15 @@
+Recursive definition: 
+Since an arithmetic slice has to be at least 3 elements long, we can start traversing the list from index 2. 
+At each index, you will check if the value you’re currently looking at minus the previous value is equal to the previous value minus the previous previous value. 
+If they are the same, that means that you have an arithmetic slice and you update the number of arithmetic slices up until that point.  
+You use recursion as you traverse the list since you’re checking previous values (if A[i] - A[i-1] == A[i-1] - A[i-2]). 
+Since an arithmetic slice can be part of a larger one, that’s where you have subproblems that you need to store solutions to.
+
+Data structure: 
+You can use a list to store the number of arithmetic slices that are formed at that index. 
+If a slice is part of a bigger slice, you just add 1 to the previous amount. 
+You can also keep count of the total number of arithmetic slices using a single variable which will be your answer.
+
+IDEAL and Dukes 7 steps: 
+It helped to come up a small instance of the problem to see if my idea worked. 
+It helped to see how the subproblems were being solved and how the solutions to those smaller problems could be stored and used to come up with the final answer. 
