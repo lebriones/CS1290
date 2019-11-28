@@ -1,0 +1,17 @@
+Recursive definition: 
+In order to find a palindrome, the substring has to read the same way forward and backward. 
+At first, we check every character of the substring. Every character is going to be a palindrome of itself since it is only one character long. 
+This follows a recursive formula because we basically check inside out to see if the inner substring is a palindrome. 
+If the inner substring is a palindrome, and the outer characters are also palindromes, then we can safely assume that the whole string is a palindrome. 
+This applies for all of the substrings that meet that condition. This is how we know we can solve this problem using dynamic programming. 
+We use the previous result of the inner palindrome to verify that the outer characters also form a palindrome.
+
+Data structure: 
+We can use a matrix to keep track of which characters are palindromes of themselves as well as which substrings are palindromes. 
+If we see that a previous smaller substring was a palindrome, we can use that result to check if a bigger substring is also a palindrome. 
+We set the matrix initially to all 0s and we change the value at that coordinate to 1 if it is a palindrome. 
+We can just keep track of the count by adding all the 1s and returning that at the end.
+
+IDEAL and Duke’s 7 steps: 
+I used decomposition to solve small instances of the problem which helped me solve even bigger instances. 
+It also helped me understand the recursive logic as well as how to keep track of the palindromes that were validated.
