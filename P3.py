@@ -1,4 +1,4 @@
-def count_substrings(self, s):
+def count_substrings(s):
         n = len(s)
         count = 0
         pal = [[0]*(n) for i in range(n)]
